@@ -1,0 +1,505 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html, body{
+    font-family: 'Indie Flower', sans-serif;
+    color: white;
+    background-image: url('./img/coffee-background.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    scroll-behavior:smooth;
+    
+}
+.section-padding{
+    padding: 2rem 0;
+}
+
+.grid-container{
+    max-width: 90vw;
+    margin: 2rem auto;
+    display: grid;
+    grid-row-gap: 2rem;
+}
+@media screen and (min-width: 768px){
+    .grid-container-medium{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 4rem;
+    }
+    .grid-container{
+        max-width: 75vw;
+    }
+}
+.section-title{
+    padding: 1rem 0.5rem;
+}
+.section-name{
+    font-size: 3rem;
+    text-transform: capitalize;
+}
+.section-divider{
+    background-color: burlywood;
+    width: 100%;
+    height: 0.25rem;
+}
+.section-text{
+    line-height: 1.5;
+    margin-top: 1rem;
+    letter-spacing: 0.1rem;
+    color: white
+}
+
+.banner-icons .icon:hover{
+    background: burlywood;
+    color: white;
+}
+.banner-icons .button .icon{
+    display: block;
+    text-decoration: none;
+    color: white;
+    border:0.1rem solid white;
+    border-radius: 50%;
+    padding: 0.25rem;
+    transition: all 0.4s linear;
+    text-align: center;
+    box-sizing: border-box;
+}
+.banner-icons{
+    width: 50%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 2rem); 
+    grid-column-gap: 0.5rem;
+    justify-content: center;
+}
+.social-icon{
+    color: white;
+}
+
+.header{
+    display: grid;
+    grid-template-columns: 80%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+}
+@media screen and (max-width:768px){
+    .header{
+        background-image: url('./img/coffee-background.jpg');
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+    }
+}
+
+.banner{
+    text-align: center;
+}
+.banner-title{
+    font-size: 3rem;
+    text-transform: capitalize;
+    color: white;
+}
+@media screen and (min-width: 768px){
+    .banner-title{
+        font-size: 9rem;
+    }
+}
+.shopBtn{
+    position: fixed;
+    top: 5%;
+    right: 5%;
+    color: white;
+    cursor: pointer;
+    transition: all 0.4s linear;
+    z-index: 5;
+}
+.shopBtn:hover{
+    color: burlywood;
+}
+.cart{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 70%;
+    background-color: white;
+    
+}
+.cart{
+    display: flex;
+    flex-direction: column;
+    width: 0;
+    overflow: hidden;
+    transition: all 0.4s linear;
+    z-index: 6;
+    overflow: scroll;
+}
+.cart-show{
+    width: 30rem;
+    border-left: .5rem solid burlywood;
+    border-bottom: .5rem solid burlywood;
+}
+.items-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+}
+.cart-items{
+    list-style: none;
+}
+.cart-title{
+    color: black;
+    text-align: center;
+    margin-bottom: 2%;
+}
+.cart-img{
+    max-width: 5rem;
+}
+.price-item{
+    color: black;
+}
+.price-total{
+    border-top: 0.2rem solid burlywood;
+    color: black;
+    display: block;
+    text-align: left;
+    margin-left: 2%;
+    font-size: 2rem;
+}
+.single-item{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: black;
+    font-size: 1rem;
+} 
+.closeBtn-cart{
+    width: 15rem;
+    background-color: white;
+    color: black;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0%;
+    left: 0;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.4s linear
+}
+.remove-itemBtn{
+    background-color: white;
+    color: black;
+    transition: all 0.4s linear;
+    text-align: center;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+}
+.closeBtn-cart:hover{
+    background-color: black;
+    color: white;
+}
+.remove-itemBtn:hover{
+    background-color: black;
+    color: white;
+}
+.checkoutBtn-cart{
+    width: 15rem;
+    background-color: white;
+    color: black;
+    padding: .5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0%;
+    right: 0;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.4s linear
+}
+.checkoutBtn-cart:hover{
+    background-color: burlywood;
+    color: white;
+}
+.navBtn{
+    position: fixed;
+    top: 5%;
+    left: 5%;
+    color: white;
+    cursor: pointer;
+    transition: all 0.4s linear;
+    z-index: 5;
+}
+.navBtn:hover{
+    color: burlywood;
+}
+.nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: burlywood;
+    z-index: 6
+}
+.nav{
+    width: 0;
+    overflow: hidden;
+    transition: all 0.4s linear;
+}
+.nav-show{
+    width: 15rem;
+}
+.nav-hide{
+    width: 0;
+    overflow: hidden;
+}
+.single-link{
+    display: block;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: black;
+    font-size: 2rem;
+    padding: 0 5rem 1rem;
+    transition: all 0.4s ease-in
+}
+.closeBtn{
+    width: 15rem;
+    background-color: burlywood;
+    color: black;
+    padding: 1rem 1rem 1rem 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0%;
+    left: 0;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.4s linear;
+    
+}
+.closeBtn:hover{
+    background-color: black;
+    color: burlywood;
+}
+.nav-links{
+    list-style-type: none;
+}
+.single-link:hover{
+    background-color: black;
+    color: burlywood;
+    padding: 1.5rem;
+}
+
+/* about section */
+.about-container{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto 1fr;
+    grid-gap: 2rem;
+}
+
+.aboutImg-item{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+@media screen and (min-width: 768px){
+    .about-img-reverse{
+        order: -1;
+    }
+    .about-container{
+        grid-template-rows: 1fr 1fr;
+    } 
+}
+
+/*menu section */
+.menu-container{
+    max-width: 90vw;
+    margin: 2rem auto;
+}
+.menu-item-img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    cursor: pointer;
+}
+.menu-item{
+    overflow: hidden;
+    position: relative;
+}
+.item-title{
+    text-align: center;
+}
+@media screen and (min-width: 576px){
+    .menu-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+    }
+}
+@media screen and (min-width:992px){
+    .menu-container{
+        min-height: 120vh;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+}
+
+/* modal*/
+.menu-modal{
+    display: none;
+}
+
+.menu-modal-show{
+    position: fixed;
+    background: rgb(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.modal-item{
+    background: url('/img/menu-1.jpg')center/cover;
+    border: 0.5rem solid burlywood;
+    height: 70vh;
+    width: 80vw;
+}
+@media screen and (min-width: 768px){
+    .modal-item{
+        height: 80vh;
+        width: 60vw;
+    }
+}
+.modal-close{
+    position: fixed;
+    font-size: 2rem;
+    color: white;
+    top: 5%;
+    right: 5%;
+    text-decoration: none;
+    display: inline-block;
+    transition: color 0.4s linear;
+    cursor: pointer;
+}
+.modal-close:hover{
+    color: burlywood;
+}
+/* products */
+.product-item-img{
+    width: 100%;
+    height: 50vh;
+    display: block;
+}
+.product-container{
+    max-width: 90vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-row-gap: 2rem;
+}
+.product-info{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.product-item{
+    margin: 1rem 0;
+    padding: 0.5rem
+}
+.buy-btn{
+    padding: 0.8rem 2rem;
+    background-color: black;
+    color: white;
+    transition: all 0.4s linear;
+    display: block;
+    margin: 0 auto;
+}
+.buy-btn:hover{
+    background-color: burlywood;
+    color: black;
+}
+.product-title{
+    text-align: center;
+}
+.product-price{
+    text-align: center;
+}
+
+@media screen and (min-width:992px){
+    .product-container{
+        min-height: 60vh;
+        min-width: 60vw;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* contact*/
+
+.contact-container{
+    max-width: 90vw;
+    margin: 0 auto;
+    display: grid;
+    grid-row-gap: 1rem;
+}
+.contact-info{
+    display: grid;
+    justify-content:center;
+}
+.contact-item{
+    margin: 1rem 0;
+    padding: 0.5rem
+}
+.contact-icon{
+    font-size: 3rem;
+    color: burlywood;
+}
+.contact-title{
+    text-transform: uppercase;
+    margin: 0.5rem 0;
+    letter-spacing: 0.25rem;
+}
+.contact-text{
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: white;
+}
+@media screen and (min-width:768px){
+    .contact-info{
+        grid-template-columns: repeat(3, 1fr);
+        order: -1;
+
+    }
+}
+@media screen and (min-width:992px){
+    .contact-info{
+        grid-template-columns: 1fr;
+        order: 0;
+    }
+    .contact-container{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-column-gap: 1rem;
+    }
+    .contact-map{
+        align-self: center;
+    }
+}
