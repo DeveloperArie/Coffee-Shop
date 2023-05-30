@@ -8,11 +8,8 @@
 html, body{
     font-family: 'Indie Flower', sans-serif;
     color: white;
-    background-image: url('./img/coffee-background.jpg');
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+    background-color: darkred;
+    
     scroll-behavior:smooth;
     
 }
@@ -83,6 +80,11 @@ html, body{
 }
 
 .header{
+    background-image: url('./img/coffee-background.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: relative;
+    background-repeat: no-repeat;
     display: grid;
     grid-template-columns: 80%;
     justify-content: center;
@@ -90,12 +92,13 @@ html, body{
     position: relative;
     height: 100vh;
 }
+
 @media screen and (max-width:768px){
     .header{
-        background-image: url('./img/coffee-background.jpg');
+        background-color: darkred;
         background-position: center;
         background-size: cover;
-        background-attachment: fixed;
+        background-attachment: relative;
         background-repeat: no-repeat;
     }
 }
@@ -142,11 +145,12 @@ html, body{
     transition: all 0.4s linear;
     z-index: 6;
     overflow: scroll;
+   
 }
 .cart-show{
     width: 30rem;
-    border-left: .5rem solid burlywood;
-    border-bottom: .5rem solid burlywood;
+    border-left: .2rem solid burlywood;
+    border-bottom: .2rem solid burlywood;
 }
 .items-container{
     display: flex;
@@ -185,6 +189,7 @@ html, body{
     color: black;
     font-size: 1rem;
 } 
+
 .closeBtn-cart{
     width: 15rem;
     background-color: white;
@@ -193,7 +198,7 @@ html, body{
     font-size: 1.5rem;
     cursor: pointer;
     position: absolute;
-    bottom: 0%;
+    bottom: 0;
     left: 0;
     text-decoration: none;
     text-align: center;
@@ -223,7 +228,7 @@ html, body{
     font-size: 1.5rem;
     cursor: pointer;
     position: absolute;
-    bottom: 0%;
+    bottom: 0;
     right: 0;
     text-decoration: none;
     text-align: center;
@@ -305,9 +310,12 @@ html, body{
 /* about section */
 .about-container{
     display: grid;
-    grid-template-columns: 100%;
+    grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
     grid-gap: 2rem;
+    margin: 0 auto;
+    max-width: 90vw;
+
 }
 
 .aboutImg-item{
