@@ -17,6 +17,7 @@ const modalClose = document.querySelector('.modal-close')
 const addCartItem = document.querySelectorAll('.buy-btn')
 const itemPriceEl = document.querySelector('.price-item')
 const mainContainer = document.querySelector('.cart')
+const cartItems = document.querySelector('.items')
 const checkoutBtn = document.querySelector('.checkoutBtn-cart')
 let totalEl = document.querySelector('.price-total')
 let total = 0
@@ -30,7 +31,6 @@ function addToCart(event){
     let itemImg = btnParent.children[1].src
     let itemName = btnParent.children[0].innerText
     let itemPrice = btnParent.children[2].innerText
-
     let item = document.createElement('div')
     item.classList.add('item')
     item.innerHTML += ` 
@@ -39,8 +39,7 @@ function addToCart(event){
     <p class="price-item">${itemPrice}</p>
     <span class="remove-itemBtn">Remove</span>
 </div>`
-    mainContainer.appendChild(item)
-    mainContainer.insertBefore(item, mainContainer.lastElementChild)
+    cartItems.appendChild(item)
     let itemPriceNum = parseFloat(itemPrice.replace('$', ''))
     total += itemPriceNum
     updateTotal()
