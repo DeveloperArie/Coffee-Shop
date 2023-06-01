@@ -4,7 +4,6 @@
  */
 const navBar = document.querySelector('.nav')
 const navBtn = document.querySelector('.navBtn')
-const shopNav = document.querySelector('.cart')
 const shopBtn = document.querySelector('.shopBtn')
 const closeCart = document.querySelector('.closeBtn-cart')
 const closeNav = document.querySelector('.closeBtn')
@@ -32,17 +31,16 @@ function addToCart(event){
     let itemName = btnParent.children[0].innerText
     let itemPrice = btnParent.children[2].innerText
 
-    let cartItemContainer = document.createElement('div')
-    cartItemContainer.innerHTML += ` <div class="items-container">
+    let item = document.createElement('div')
+    item.classList.add('item')
+    item.innerHTML += ` 
     <img src="${itemImg}" class="cart-img">
-    <ul class="cart-items">
-        <li class="single-item">${itemName}</li>
-    </ul>
+    <div class="single-item">${itemName}</div>
     <p class="price-item">${itemPrice}</p>
     <span class="remove-itemBtn">Remove</span>
 </div>`
-    mainContainer.insertBefore(cartItemContainer, mainContainer.lastElementChild)
-
+    mainContainer.appendChild(item)
+    mainContainer.insertBefore(item, mainContainer.lastElementChild)
     let itemPriceNum = parseFloat(itemPrice.replace('$', ''))
     total += itemPriceNum
     updateTotal()
@@ -71,7 +69,7 @@ checkoutBtn.addEventListener('click', function(){
 })
 
 shopBtn.addEventListener('click', function(){
-    shopNav.classList.add('cart-show')
+    mainContainer.classList.add('cart-show')
 })
 
 navBtn.addEventListener('click', function(){
@@ -79,7 +77,7 @@ navBtn.addEventListener('click', function(){
 })
 
 closeCart.addEventListener('click', function(){
-    shopNav.classList.toggle('cart-show')
+    mainContainer.classList.toggle('cart-show')
 })
 
 closeNav.addEventListener('click', function(){
