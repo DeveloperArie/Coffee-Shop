@@ -16,7 +16,6 @@ html, body{
 .section-padding{
     padding: 2rem 0;
 }
-
 .grid-container{
     max-width: 90vw;
     margin: 2rem auto;
@@ -30,7 +29,7 @@ html, body{
         grid-column-gap: 4rem;
     }
     .grid-container{
-        max-width: 75vw;
+        max-width: 90vw;
     }
 }
 .section-title{
@@ -52,7 +51,6 @@ html, body{
     letter-spacing: 0.1rem;
     color: white
 }
-
 .banner-icons .icon:hover{
     background: burlywood;
     color: white;
@@ -79,7 +77,6 @@ html, body{
 .social-icon{
     color: white;
 }
-
 .header{
     background-image: url('./img/coffee-background.jpg');
     background-position: center;
@@ -93,7 +90,6 @@ html, body{
     position: relative;
     height: 100vh;
 }
-
 @media screen and (max-width:768px){
     .header{
         background-color: darkred;
@@ -103,7 +99,6 @@ html, body{
         background-repeat: no-repeat;
     }
 }
-
 .banner{
     text-align: center;
 }
@@ -142,7 +137,6 @@ html, body{
     transition: all 0.4s linear;
     overflow-x: hidden;
 }
-
 .cart .cart-title{
     color: black;
     font-size: 2rem;
@@ -171,7 +165,6 @@ html, body{
     border-left: .2rem solid burlywood;
     border-bottom: .2rem solid burlywood;
 }
-
 .cart-img{
     max-width: 5rem;
 }
@@ -191,7 +184,6 @@ html, body{
     color: black;
     font-size: 1rem;
 } 
-
 .closeBtn-cart{
     width: 15rem;
     background-color: white;
@@ -239,7 +231,6 @@ html, body{
     background-color: black;
     color: white;
 }
-
 .navBtn{
     position: fixed;
     top: 5%;
@@ -326,7 +317,6 @@ html, body{
     height: 100%;
     display: block;
 }
-
 @media screen and (min-width: 768px){
     .about-img-reverse{
         order: -1;
@@ -369,12 +359,10 @@ html, body{
         grid-template-rows: repeat(2, 1fr);
     }
 }
-
 /* modal*/
 .menu-modal{
     display: none;
 }
-
 .menu-modal-show{
     position: fixed;
     background: rgb(0,0,0,0.5);
@@ -388,7 +376,6 @@ html, body{
     align-items: center;
     
 }
-
 .modal-item{
     background: url('/img/menu-1.jpg')center/cover;
     border: 0.5rem solid burlywood;
@@ -464,9 +451,7 @@ html, body{
         grid-template-columns: repeat(3, 1fr);
     }
 }
-
 /* contact*/
-
 .contact-container{
     max-width: 90vw;
     margin: 0 auto;
